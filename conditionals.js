@@ -16,7 +16,11 @@ let scienceButton = document.querySelector(".science-button");
 
 englishButton.addEventListener("click", function() {
     let englishInput = document.querySelector(".english").value;
-
+    if(englishInput === "Mon" ) {
+        document.querySelector(".english-message").innerHTML = "Correct!";
+    } else {
+        document.querySelector(".english-message").innerHTML = "Incorect! Try again.";
+    }
     // 2. Write an if-else conditional statement.
     //  - Check if the value of the variable englishInput is correct.
     //  - The answer should be "Mon".
@@ -35,6 +39,10 @@ mathButton.addEventListener("click", function() {
     // NOTE: we treat numbers slightly different than strings.
     //  - We need to write 'Number' before the grabbed value. 
     let mathInput = Number(document.querySelector(".math").value);
+    if(mathInput === 30) {
+        document.querySelector(".math-message").innerHTML = "Correct!";
+    } else {
+        document.querySelector(".math-message").innerHTML = "Wrong! Try again.";}
 
     // 3. Write an if-else conditional statement.
     //  - Check if the value of the variable mathInput is correct.
